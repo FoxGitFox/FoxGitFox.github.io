@@ -46,8 +46,8 @@
 И отключаем:<br>
 <mark>#LoadModule mpm_worker_module libexec/apache2/mod_mpm_worker.so</mark><br>
 <p>Теперь идем дальше в конец этого списка и добавляем следующие строки для включения php:<br>
-<mark>LoadModule php7_module libexec/apache2/libphp.so</mark><br>
-<mark>&#706IfModule php7_module&#707</mark><br>
+<mark>LoadModule php_module libexec/apache2/libphp.so</mark><br>
+<mark>&#706IfModule php_module&#707</mark><br>
 <mark>&#706FilesMatch \.php$&#707</mark><br>
 <mark> SetHandler application/x-httpd-php </mark><br>
 <mark>&#706/FilesMatch&#707</mark><br>
