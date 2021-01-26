@@ -1,0 +1,32 @@
+
+﻿<html>
+<title>....</title>
+<head>
+</ststyle>
+<script type='text/javascript'>  
+function initTimer(time, id, callback) { 
+var timer = document.getElementById(id); 
+setTimeout(function () { 
+if (time > 0) { 
+timer.innerHTML = time--; 
+setTimeout(arguments.callee, 1000); } 
+else { 
+callback.call(timer); } }, 0); } 
+</script>
+</head>
+<body bgcolor="lightblue">
+<div class="content">
+<p><center><big>Кнопка появится через👉 </big><span> 
+<span id='timer'></span> </span> </p>
+<script type='text/javascript'>  
+initTimer(3, "timer", function () { 
+this.parentNode.innerHTML = '<div><center><a class="button" href="https://foxgitfox.github.io">🤨Упс, неудачное подключение</center></a><br> Нихотите ждать?<br>Тогда, вот→<a href="net.html">клик</a></center></div>';}); </script></div></div>
+<br><br>
+
+<big>Если есть ошибки с подключением то это может означать:<br></big>
+<center>
+				1.плохое подключение<br>
+				2.много людей в очереди<br>
+</center>
+</body>
+</html>
