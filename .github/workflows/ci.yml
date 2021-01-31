@@ -1,0 +1,57 @@
+name: CI
+
+on:
+    [push, pull_request]
+
+jobs:
+    test:
+        name: Test on PHP ${{ matrix.php-versions }}
+        runs-on: ubuntu-latest
+
+        strategy:
+            fail-fast: false
+            matrix:
+                php-versions: ['7.2', '7.3', '7.4', '8.0']
+
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: ${{ matrix.php-versions }}
+                  coverage: none
+
+            - name: Install Composer Dependencies
+              uses: ramsey/composer-install@v1
+
+            - name: Run phpunit
+              run: vendor/bin/phpunit --verbose
+
+    roave_bc_check:
+        name: Roave BC Check
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo true
+            - uses: actions/checkout@v2
+
+            - name: Roave BC Check
+              uses: docker://nyholm/roave-bc-check-ga
+
+    phpstan:
+        name: PHPStan
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+
+            - uses: shivammathur/setup-php@v2
+              with:
+                  php-version: 7.2
+                  coverage: none
+
+            - name: Install Composer Dependencies
+              uses: ramsey/composer-install@v1
+
+            - name: Run phpstan
+              run: vendor/bin/phpstan analyse --no-progress
