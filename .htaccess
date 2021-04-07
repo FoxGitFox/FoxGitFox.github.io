@@ -8,3 +8,5 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^ https://foxgithub.github.io
 RewriteRule (.*) https://foxgitfox.com/$1 [R=301,L]
 
+RewriteBase /
+RewriteRule (.*)\.html$ $1 [R=301,L]
