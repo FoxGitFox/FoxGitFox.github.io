@@ -5,6 +5,6 @@ ErrorDocument 404 https://foxgitfox.github.io/404.html
 
 Redirect 301 / https://foxgit.com
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^ yoursite.ru
-RewriteRule (.*) http://www.yoursite.ru/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^ https://foxgithub.github.io
+RewriteRule (.*) https://www.foxgitfox.github.io/$1 [R=301,L]
 
