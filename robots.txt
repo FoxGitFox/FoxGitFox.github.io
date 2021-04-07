@@ -1,9 +1,9 @@
 User-agent: Yandex
 Disallow: /image
 Disallow: /img
-Disallow: /
+Disallow: /.github
 User-agent: Googlebot
 Disallow: /image
 Disallow: /img
-Disallow: /
+Disallow: /.github
 Sitemap: https://foxgitfox.github.io
