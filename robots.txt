@@ -1,0 +1,9 @@
+User-agent: Yandex
+Disallow: /image
+Disallow: /img
+Disallow: /
+User-agent: Googlebot
+Disallow: /image
+Disallow: /img
+Disallow: /
+Sitemap: https://foxgitfox.github.io
