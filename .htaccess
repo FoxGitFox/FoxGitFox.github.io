@@ -3,10 +3,5 @@ SetEnv SERVER_ADMIN kogrindaniil@gmail.com
 
 ErrorDocument 404 https://foxgitfox.github.io/404.html
 
-Redirect 301 / https://foxgit.com
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^ https://foxgithub.github.io
-RewriteRule (.*) https://foxgitfox.com/$1 [R=301,L]
-
 RewriteBase /
 RewriteRule (.*)\.html$ $1 [R=301,L]
