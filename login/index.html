@@ -1,7 +1,21 @@
+<head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+function checkParams() {
+    var name = $('#log').val();
+    var email = $('#email').val();
+     
+    if(name.length != 5 && email.length != 5) {
+        $('#submit').removeAttr('disabled');
+    } else {
+        $('#submit').attr('disabled', 'disabled');
+    }
+}
+</script>
+</head>
 <body lang="ru" bgcolor="lightblue">
 <form id="form" action="act.html" method="get" target="_blank">
-<center><input type="text" name="log" value="">-name(обязательно) <br>
-<input type="text" name="email" value"">-email(не обязательно)<br>
+<center><input type="text" name="log" value="">-name<br>
+<input type="text" name="email" value"">-email<br>
 <input type="submit" value="Отправить"></center>
 </form>
 </body>
