@@ -1,23 +1,52 @@
 <html>
 <head>
+<style>
+body {
+  background: fon.png no-repeat;
+background-size: cover;
+     }
+  .over {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  }
+.notfound {
+  text-align: center;
+  color: red;
+  font-size: 20px;
+  position: relative;
+  z-index: 2;
+  }
+.notfound a {
+  color: #fff;
+  font-size: 20px;
+  }
+.notfound a:hover {
+  color: green;
+  text-decoration: none;
+  }
+</style>
+
 <link rel="shortcut icon" href="images/ava.png" type="image/png">
 <title>FOXgit/chat</title>
 </head>
-<body lang="ru" bgcolor="lightblue">
-
+<body lang="ru" bgcolor="fon.png">
+<body background="fon.png">
+<div class="over"></div>
+<div class="notfound">
 <style type="text/css">
   .menu-2 {
      margin: 0;
      padding: 0;
      height: auto;
      list-style-type: none;
-     background-color: lightblue;
+     background-color: ;
      text-align: center;
      }
   .menu-2 li {
      margin: 5px 2px 5px 2;
      padding: 6px 8px 6px;
-     background-color: #4960fb;
+     background-color: orange;
      border: 10px solid #071eb9;
      border-radius: 1px 20px;
      display: inline-block;
