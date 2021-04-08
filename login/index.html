@@ -1,4 +1,31 @@
 <head>
+<style>
+body {
+  background: fon.png no-repeat;
+background-size: cover;
+     }
+  .over {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  }
+.notfound {
+  text-align: center;
+  color: red;
+  font-size: 50px;
+  position: relative;
+  z-index: 2;
+  }
+.notfound a {
+  color: #fff;
+  font-size: 50px;
+  }
+.notfound a:hover {
+  color: green;
+  text-decoration: none;
+  }
+</style>
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
 function checkParams() {
     var log = $('#log').val();
@@ -12,7 +39,9 @@ function checkParams() {
 }
 </script>
 </head>
-<body lang="ru" bgcolor="lightblue">
+<body lang="ru" bgcolor="orange">
+<div class="over"></div>
+<div class="notfound">
 <form id="form" action="act.html" method="get" target="_blank">
 <center><input type="text" name="log" value="" onkeyup="checkParams()>-name<br>
 <input type="text" name="email" value""onkeyup="checkParams()>-email<br>
