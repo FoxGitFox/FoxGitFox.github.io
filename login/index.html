@@ -31,7 +31,7 @@ function checkParams() {
     var log = $('#log').val();
     var email = $('#email').val();
      
-    if(name.length != 5 && email.length != 5) {
+    if(log.length != 0 && email.length != 0) {
         $('#submit').removeAttr('disabled');
     } else {
         $('#submit').attr('disabled', 'disabled');
