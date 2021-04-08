@@ -25,26 +25,13 @@ background-size: cover;
   text-decoration: none;
   }
 </style>
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
-function checkParams() {
-    var log = $('#log').val();
-    var email = $('#email').val();
-     
-    if(log.length != 0 && email.length != 0) {
-        $('#submit').removeAttr('disabled');
-    } else {
-        $('#submit').attr('disabled', 'disabled');
-    }
-}
-</script>
 </head>
 <body lang="ru" background="https://foxgitfox.github.io/fon.png">
 <div class="over"></div>
 <div class="notfound">
 <form id="form" action="act.html" method="get" target="_blank">
-<center><input type="text" name="log" value="" onkeyup="checkParams()">-name<br>
-<input type="text" name="email" value="" onkeyup="checkParams()">-email<br>
-<input type="submit" value="Отправить" disabled></center>
+<center><input type="text" name="log" value="">-name<br>
+<input type="text" name="email" value="">-email<br>
+<input type="submit" value="Отправить"></center>
 </form>
 </body>
