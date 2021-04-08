@@ -1,7 +1,7 @@
 <head>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
 function checkParams() {
-    var name = $('#log').val();
+    var log = $('#log').val();
     var email = $('#email').val();
      
     if(name.length != 5 && email.length != 5) {
@@ -14,8 +14,8 @@ function checkParams() {
 </head>
 <body lang="ru" bgcolor="lightblue">
 <form id="form" action="act.html" method="get" target="_blank">
-<center><input type="text" name="log" value="">-name<br>
-<input type="text" name="email" value"">-email<br>
-<input type="submit" value="Отправить"></center>
+<center><input type="text" name="log" value="" onkeyup="checkParams()>-name<br>
+<input type="text" name="email" value""onkeyup="checkParams()>-email<br>
+<input type="submit" value="Отправить" disabled></center>
 </form>
 </body>
