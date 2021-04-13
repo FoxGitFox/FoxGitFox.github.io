@@ -5,3 +5,5 @@ ErrorDocument 404 https://foxgitfox.github.io/404.html
 
 RewriteBase /
 RewriteRule (.*)\.html$ $1 [R=301,L]
+
+AddHandler fcgid-script .php .html .htm
