@@ -1,9 +1,7 @@
 ServerSignature EMail
 SetEnv SERVER_ADMIN kogrindaniil@gmail.com
-
 ErrorDocument 404 https://foxgitfox.github.io/404.html
-
 RewriteBase /
 RewriteRule (.*)\.html$ $1 [R=301,L]
-
 AddHandler fcgid-script .php .html .htm
+AddType application/x-httpd-php .html .htm
