@@ -80,24 +80,24 @@
 Всё просто!<br>
 Пишем:<br>
 <mark>apt install nano</mark><br>
-<mark>nano ../usr/etc/apache2/extra/httpd-vhosts.conf<mark><br>
+<mark>nano ../usr/etc/apache2/extra/httpd-vhosts.conf</mark><br>
 В файле который открылся стераем всё до чиста и пишем:<br>
-<mark><div style="font-size:15px">&#706VirtualHost (ВАШ IP:8080/80)&#707
-    ServerAdmin webmaster@dummy-host.example.com
-    DocumentRoot "/sdcard/www/"
-    ServerName (NAME)
-    ServerAlias www.dummy-host.example.com
-    ErrorLog "var/log/apache2/dummy-host2.example.com-error_log"
-   CustomLog "var/log/apache2/dummy-host2.example.com-access_log"&#707
-&#706/VirtualHost&#707
-&#706VirtualHost (ВАШ IP:8080/80)&#707
-    ServerAdmin webmaster@dummy-host2.example.com
-    DocumentRoot "/sdcard/www/"
-    ServerName (NAME)
-    ErrorLog "var/log/apache2/dummy-host2.example.com-error_log"
-    CustomLog "var/log/apache2/dummy-host2.example.com-access_log&#707
-&#706/VirtualHost&#707</div></mark><br><br>
+<mark>&#706VirtualHost (ВАШ IP:8080/80)&#707<br>
+    ServerAdmin webmaster@dummy-host.example.com<br>
+    DocumentRoot "/sdcard/www/"<br>
+    ServerName (NAME)<br>
+    ServerAlias www.dummy-host.example.com<br>
+    ErrorLog "var/log/apache2/dummy-host2.example.com-error_log"<br>
+   CustomLog "var/log/apache2/dummy-host2.example.com-access_log"&#707<br>
+&#706/VirtualHost&#707<br><br><br>
+&#706VirtualHost (ВАШ IP:8080/80)&#707<br>
+    ServerAdmin webmaster@dummy-host2.example.com<br>
+    DocumentRoot "/sdcard/www/"<br>
+    ServerName (NAME)<br>
+    ErrorLog "var/log/apache2/dummy-host2.example.com-error_log"<br>
+    CustomLog "var/log/apache2/dummy-host2.example.com-access_log&#707<br>
+&#706/VirtualHost&#707</mark><br><br>
 ВСЁ!
-У Вас нечего не будет работать! Так как копировать нельзя! Termux видет такие </mark><</mark> скобки! А не такие <mark> &#706 </mark>!<br>
+У Вас нечего не будет работать! Так как копировать нельзя! Termux видет такие <mark><</mark> скобки! А не такие <mark> &#706 </mark>!<br>
 </body>
 <html>
