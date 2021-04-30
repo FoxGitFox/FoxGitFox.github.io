@@ -1,0 +1,103 @@
+<html>
+<head>
+
+<head>
+<style>
+     }
+  .over {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  }
+.notfound {
+  text-align: center;
+  color: red;
+  font-size: 20px;
+  position: relative;
+  z-index: 2;
+  }
+.notfound a {
+  color: #fff;
+  font-size: 20px;
+  }
+.notfound a:hover {
+  color: green;
+  text-decoration: none;
+  }
+</style>
+
+ <link rel="shortcut icon" href="images/ava.png" type="image/png">
+<title>termux#3</title>
+
+</head>
+<body>
+<div class="over"></div>
+<div class="notfound">
+<style type="text/css">
+  .menu-2 {
+     margin: 0;
+     padding: 0;
+     height: auto;
+     list-style-type: none;
+     background-color: ;
+     text-align: center;
+     }
+  .menu-2 li {
+     margin: 5px 2px 5px 2;
+     padding: 6px 8px 6px;
+     background-color: orange;
+     border: 10px solid #071eb9;
+     border-radius: 1px 20px;
+     display: inline-block;
+     transition: all 0.9s ease 0s;
+     }
+  .menu-2 a {
+    color: #f2f2f2;
+    text-decoration: none;
+    }
+  .menu-2 li:hover {
+    background-color: #ccc;
+    border-radius: 20px 6px;
+    }
+  .menu-2 li:hover a {
+    color: #red;
+    }
+</style>
+<ul class="menu-2">
+   <li><a href="index.html"><big>😎Главная😎</big></a></li>
+   <li><a href="chat.html"><big>🤣Чат🤣</big></a></li>
+   <li><a href="pril.html"><big>👾Приложения👾</big></a></li>
+   <li><a href="play.html"><big>👐Игры👐</big></a></li>
+   <li><a href="https://www.youtube.com/channel/UCpqUNlJIHkwWSP6niXl7PEQ"><big>❤YouTube❤</big></a></li>
+   <li><a href="/kingroot/index.html"><big>👉King Root✌</big></a></li>
+   <li><a href="/prog/pr.html"><big>👾Программы👾</big></a></li>
+   <li><a href="tutoril.html"><big>🤓Туториалы🤓</big></a></li>
+   <li><a href="/ipsguru/index.html"><big>🤑РУЛЕТКА🤑</big></a></li>
+</ul>
+<br><br><br>
+<p><h2>Тема: termux#3</h2><br>
+<h3>НАСТРОЙКА VHOSTS НА TERMUX</h3><br>
+Всё просто!<br>
+Пишем:<br>
+<mark>apt install nano</mark><br>
+<mark>nano ../usr/etc/apache2/extra/httpd-vhosts.conf<mark><br>
+В файле который открылся стераем всё до чиста и пишем:<br>
+<mark><div style="font-size:15px">&#706VirtualHost (ВАШ IP:8080/80)&#707
+    ServerAdmin webmaster@dummy-host.example.com
+    DocumentRoot "/sdcard/www/"
+    ServerName (NAME)
+    ServerAlias www.dummy-host.example.com
+    ErrorLog "var/log/apache2/dummy-host2.example.com-error_log"
+   CustomLog "var/log/apache2/dummy-host2.example.com-access_log"&#707
+&#706/VirtualHost&#707
+&#706VirtualHost (ВАШ IP:8080/80)&#707
+    ServerAdmin webmaster@dummy-host2.example.com
+    DocumentRoot "/sdcard/www/"
+    ServerName (NAME)
+    ErrorLog "var/log/apache2/dummy-host2.example.com-error_log"
+    CustomLog "var/log/apache2/dummy-host2.example.com-access_log&#707
+&#706/VirtualHost&#707</div></mark><br><br>
+ВСЁ!
+У Вас нечего не будет работать! Так как копировать нельзя! Termux видет такие </mark><</mark> скобки! А не такие <mark> &#706 </mark>!<br>
+</body>
+<html>
