@@ -1,3 +1,10 @@
+# php -- BEGIN cPanel-generated handler, do not edit
+<IfModule mime_module> AddType application/x-httpd-ea-php70___lsphp .php .php7 .phtml .htm .html </IfModule>
+# php -- END cPanel-generated handler, do not edit.
+
+
+
+
 
 ErrorDocument 404 https://foxgitfox.github.io/404.html
 RewriteBase /
