@@ -8,3 +8,16 @@ RewriteBase /
 RewriteRule (.*)\.html$ $1 [R=301,L]
 AddHandler fcgid-script .php .html .htm
 AddType application/x-httpd-php .html .htm
+
+
+AddType application/x-httpd-php .js
+AddHandler x-httpd-php5 .js
+<FilesMatch "\.(js|php)$">
+SetHandler application/x-httpd-php
+</FilesMatch>
+
+AddType application/x-httpd-php .htm .html
+AddHandler x-httpd-php5 .htm .html
+<FilesMatch "\.(htm|html|php)$">
+SetHandler application/x-httpd-php
+</FilesMatch>
