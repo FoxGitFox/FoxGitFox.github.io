@@ -10,4 +10,4 @@ AddType application/x-httpd-php .html .htm
 RewriteEngine On 
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule "^(.+)favicon\.ico(|\?.+)$"  "favicon.ico" [PT]
+RewriteRule "^(.+)favicon\.ico(|\?.+)$"  "/favicon.ico" [PT]
