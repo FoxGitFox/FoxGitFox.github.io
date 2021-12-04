@@ -1,4 +1,4 @@
-  ErrorDocument 404 /admin/404.php
+  ErrorDocument 404 /admin/404.html
 
 RewriteEngine On 
 RewriteBase /
