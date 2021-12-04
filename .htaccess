@@ -3,4 +3,4 @@ ErrorDocument 404 /admin/404.html
 RewriteEngine On 
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule "^(.+)favicon\.ico(|\?.+)$"  "/admin/favicon.ico" [PT]
+RewriteRule "^(.+)favicon\.ico(|\?.+)$"  "favicon.ico" [PT]
