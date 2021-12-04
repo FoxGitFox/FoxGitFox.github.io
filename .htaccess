@@ -1,4 +1,12 @@
-ErrorDocument 404 https://foxgitfox.github.io/admin/404.html
+ErrorDocument 404 https://foxgitfox.github.io/404.html
+RewriteBase /
+
+RewriteRule (.*)\.html$ $1 [R=301,L]
+
+AddHandler fcgid-script .php .html .htm
+
+AddType application/x-httpd-php .html .htm
+
 
 RewriteEngine On 
 RewriteBase /
