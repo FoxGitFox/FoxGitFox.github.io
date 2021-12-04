@@ -1,0 +1,94 @@
+<html>
+
+<head>
+
+<title>FOXgit\prog\calculator</title>
+
+ <link href="/style/style.css?ver=18" rel="stylesheet" type="text/css" />
+
+<meta name='viewport' content='width=950, user-scalable=no, maximum-scale=1.0' />
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+</head>
+
+<body>
+
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+    <script type="text/javascript" >
+
+ $(document).ready(function(){ 
+
+  $.get("/site/bars.html", function(data) {
+
+    $("#bar").html(data);
+
+  });
+
+}); 
+
+</script>
+
+    <div id="bar">
+
+    </div>
+
+<br>
+
+<div id="main">
+
+<br>
+
+      <div id="result">
+
+<center><form name="calculator" >
+
+<br><input type="textfield" name="ans" value="" style="font-size:40px">
+
+<br>
+
+<input type="button" value="1" onClick="document.calculator.ans.value+='1'" style="font-size:60px">
+
+<input type="button" value="2" onClick="document.calculator.ans.value+='2'" style="font-size:60px">
+
+<input type="button" value="3" onClick="document.calculator.ans.value+='3'" style="font-size:60px"><br>
+
+<input type="button" value="4" onClick="document.calculator.ans.value+='4'" style="font-size:60px">
+
+<input type="button" value="5" onClick="document.calculator.ans.value+='5'"style="font-size:60px">
+
+<input type="button" value="6" onClick="document.calculator.ans.value+='6'"style="font-size:60px"><br>
+
+<input type="button" value="7" onClick="document.calculator.ans.value+='7'" style="font-size:60px">
+
+<input type="button" value="8" onClick="document.calculator.ans.value+='8'"style="font-size:60px">
+
+<input type="button" value="9" onClick="document.calculator.ans.value+='9'"style="font-size:60px"><br>
+
+<input type="button" value="0" onClick="document.calculator.ans.value+='0'"style="font-size:60px">
+
+<br>
+
+<input type="button" value="-" onClick="document.calculator.ans.value+='-'"style="font-size:60px">
+
+<input type="button" value="+" onClick="document.calculator.ans.value+='+'"style="font-size:60px">
+
+<input type="button" value="*" onClick="document.calculator.ans.value+='*'"style="font-size:60px">
+
+<input type="button" value="/" onClick="document.calculator.ans.value+='/'"style="font-size:60px">
+
+<input type="reset" value="Стиреть">
+
+<input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)"style="font-size:60px">
+
+</center>
+
+</div></div>
+
+</form>
+
+</body>
+
+</html>
+
