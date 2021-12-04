@@ -1,0 +1,11 @@
+  ErrorDocument 404 /admin/404.php
+
+ ErrorDocument 403 /admin/403.php
+ ErrorDocument 500 /admin/500.php
+ ErrorDocument 502 /admin/502.php
+ ErrorDocument 503 /admin/503.php
+ ErrorDocument 504 /admin/504.php
+RewriteEngine On 
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule "^(.+)favicon\.ico(|\?.+)$"  "/admin/favicon.ico" [PT]

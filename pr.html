@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+<head><link href="style/style.css?ver=18" rel="stylesheet" type="text/css" />
+<meta name='viewport' content='width=950, user-scalable=no, maximum-scale=1.0' />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <link rel="shortcut icon" href="/images/ava.png" type="image/png">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Программы</title>
+</head>
+<body>
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" >
+ $(document).ready(function(){ 
+  $.get("/site/bars.html", function(data) {
+    $("#bar").html(data);
+  });
+}); 
+</script>
+    <div id="bar">
+    </div>
+<br>
+<div id="main">
+<br>
+      <div id="result">
+<div style="color:green; font-size:40px">Программки</div>
+<hr>
+<a href="/prog/calc.html"><button style="color:orange;font-size:30px">(калькулятор)</button></a><br><br>
+
+<hr>
+</body>
+
+</html>

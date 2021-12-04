@@ -1,0 +1,87 @@
+<html>
+<head>
+
+<head><link href="style/style.css?ver=18" rel="stylesheet" type="text/css" />
+<meta name='viewport' content='width=950, user-scalable=no, maximum-scale=1.0' />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>termux#2</title>
+
+</head>
+<body> <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" >
+ $(document).ready(function(){ 
+  $.get("/site/bars.html", function(data) {
+    $("#bar").html(data);
+  });
+}); 
+</script>
+    <div id="bar">
+    </div>
+<br>
+<div id="main">
+<br>
+      <div id="result">
+<br><br><br>
+<p><h2>Тема: termux#2</h2>
+<p>Здравствуйте! В этой статье я расскажу как раскрутить сайт у себя на телефоне:<br>
+Ну а сам же процесс подготовки мы начнем с того, что выполним такие вот две команды.
+Для того, чтобы обновить все пакеты в термуксе:<br>
+<mark>pkg update</mark><br>
+<mark>pkg upgrade</mark><br>
+<P>Устанавливаем необходимые пакеты, программы и инструменты которые тоже нам могут понадобиться командой:<br>
+<mark>pkg install php-apache git wget nano -y</mark><br>
+<p>После ввода этой команды веб-сервер уже должен установиться, а значит, мы уже можем попробовать загрузить простенькую http страничку которая сейчас должна хоститься на нашем смартфоне.
+Запускаем сам веб-сервер командой:<br>
+<mark>apachectl start</mark><br>
+<p>На предупреждения пока не обращаем внимания, главное чтобы у нас не было критических ошибок.<br>
+Ну, а сейчас давайте подключимся к нашему смартфону по его IP адресу из локальной сети, для этого вводим <mark>ifconfig</mark> и смотрим какой ip адрес выделен нашему смартфону на интерфейсе wlan0 (это wifi):<br>
+Тут есть один момент. Веб сервер мы подняли, и поидее уже можно загружать какой-нибудь движок типа Wordpressили Xenforo и начинать им пользоваться. Но… Нет. Дело в том, что по умолчанию тут работают только HTML странички, а PHP тут не подключен. И нам вручную надо это сконфигурировать. Да и не только это, параметров тут много поэтому… приступаем к конфигурации.
+Нам нужно открыть конфигурационный файл Apache вот такой вот командой:<br>
+<mark>nano ../usr/etc/apache2/httpd.conf</mark><br>
+<p>В этом консольном текстовом редакторе мы и будем работать.
+Поиск в этом редакторе Nano делается комбинацией <mark>Ctrl + W</mark>, затем вводим что ищем, и жмем <mark>Enter</mark>:<br>
+<mark>[ctrl+w] Listen [Enter]</mark><br>
+<p>В общем находим Listen, это как раз тот параметр который отвечает за порт, на котором будет находиться наш веб-сайт. Чтобы не пришлось указывать порт в браузере вручную, надо заменить его на 80 порт.
+Но, важный момент. <mark>80</mark> порт у вас будет работать только если у вас есть root права. Если у вас рут прав нет, у вас ничего не заработает потому-что Android, да и не только Android, даже Linux блокирует создание чего-то на <mark>80</mark> порту без рут прав. Поэтому всё что я буду показывать, это будет для смартфонов без рут, и соответственно будем использовать порт <mark>8080</mark>. Не так красиво, но зато заработает у всex:<br>
+Далее, чтоб вы могли легко закидывать и редактировать файлы своего веб-сервер при помощи обычного проводника, найдем такую строчку как <mark>DocumentRoot</mark>:<br>
+<mark>[ctrl+w] DocumentRoot [Enter]</mark><br>
+<p>Эта директива настраивает корневую папку сайта, т.е. именно тут будут находиться все ваши файлы. Меняем путь в двух строчках так, чтобы они приняли такой вид:<br>
+<mark>DocumentRoot "/sdcard/web/www"</mark><br>
+<mark>Directory "/sdcard/web/www"</mark><br>
+<p>Почти всегда <mark>/sdcard/</mark> - это внутренняя память смартфона, поэтому все файлы сайта будут доступны из родного проводника.Так будет удобней.<br>
+Теперь ищем директиву определяющую индексные файлы по умолчанию [DirectoryIndex]<br>:
+<mark>[ctrl+w] DirectoryIndex [Enter]</mark><br>
+<p>И изменяем её так, чтобы она индексировала в том числе php файлы, дописав сюда:<br>
+<mark>index.php</mark><br>
+<p>Далее ищем список подключаемых модулей по слову Load (Всё так же, <mark>Ctrl + W, Load, Enter</mark>):<br>
+<mark>[ctrl+w] Load [Enter]</mark>
+<p>И обратите внимание, модули с решеткой — это выключенные модули. Чтобы включить их, надо просто удалить решетку. Чтобы отключить, надо наоборот, закомментировать строчку, то есть вставить сюда знак решетки.<br>
+В общем включаем:<br>
+<mark>LoadModule mpm_prefork_module libexec/apache2/mod_mpm_prefork.so</mark><br>
+И отключаем:<br>
+<mark>#LoadModule mpm_worker_module libexec/apache2/mod_mpm_worker.so</mark><br>
+<p>Теперь идем дальше в конец этого списка и добавляем следующие строки для включения php:<br>
+<mark>LoadModule php_module libexec/apache2/libphp.so</mark><br>
+<mark>&#706IfModule php_module&#707</mark><br>
+<mark>&#706FilesMatch \.php$&#707</mark><br>
+<mark> SetHandler application/x-httpd-php </mark><br>
+<mark>&#706/FilesMatch&#707</mark><br>
+<mark>&#706/IfModule&#707</mark><br>
+<p>Далее создаем нашу новую корневую папку сайта.<br>
+Но сначала давайте перейдем во внутреннюю память телефонa:<br>
+<mark>cd /sdcard/</mark><br>
+<p>Я создаю папку с тем же названием, которое я прописывал в конфиг файле для DocumentRoot и Directory такой вот командой:<br>
+<mark>mkdir -p /sdcard/web/www</mark><br>
+<p>Заходии в проводник, в путь нашего сайта<br>
+Далее создаём новый файл и называем его <mark>index.php</mark><br>
+в нëм пишем:<br>
+<mark>&#706?php</mark><br>
+   <mark> phpinfo();</mark><br>
+<mark>?&#707</mark><br>
+<p>Далее выводим:<br>
+<mark>apachectl restart</mark><br>
+<p>Все! Сервер запущен, осталоcь перейти по ip нашего смартфона, то есть <mark>192.168.0.158:8080</mark><br><br>
+<center><strong>(Спойлер)</strong><br></center>
+У Вас нечего не будет работать! Так как копировать нельзя! Termux видет такие <mark><</mark> скобки! А не такие <mark> &#706 </mark>!<br>
+</body>
+<html>

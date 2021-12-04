@@ -1,0 +1,46 @@
+<html>
+<head>
+
+
+<head>
+<link href="style/style.css?ver=18" rel="stylesheet" type="text/css" />
+<meta name='viewport' content='width=950, user-scalable=no, maximum-scale=1.0' />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>termux#4</title>
+
+
+</head>
+<body> <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" >
+ $(document).ready(function(){ 
+  $.get("/site/bars.html", function(data) {
+    $("#bar").html(data);
+  });
+}); 
+</script>
+    <div id="bar">
+    </div>
+<br>
+<div id="main">
+<br>
+      <div id="result">
+<br><br><br>
+<p><h2>Тема: termux#4</h2><br>
+<h3>ОБЩЕДОСТУПНЫЙ САЙТ НА termux С ПОМОЩЬЮ ngrok</h3><br>
+Всё просто!<br>
+Пишем:<br>
+<mark>apt install git</mark><br>
+<mark>git clone https://github.com/tchelospy/termux-ngrok.git</mark><br>
+Открываем папку с ngrok:<br>
+<mark>cd termux-ngrok</mark><br>
+Делаем файл исполняемым:<br>
+<mark>chmod +x termux-ngrok.sh</mark><br>
+Запускаем:<br>
+<mark>./termux-ngrok.sh</mark><br>
+Ngrok установлен в termux, появилась новая команда:<br>
+<mark>ngrok http 8080</mark><br>
+Если у вас есть рут то вместо 8080 можно поставить 80, если рут нету то оставьте 8080! это важно!!<br>
+Всё сайт запущен, теперь перейдя по ссылке которую нам выдал ngrok все будут видеть то что у вас в localhost<br>
+СПАСИБО ЗА ПОСЕЩЕНИЕ!
+</body>
+<html>

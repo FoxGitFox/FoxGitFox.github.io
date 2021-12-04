@@ -1,0 +1,54 @@
+<html>
+<head>
+
+<head><link href="style/style.css?ver=18" rel="stylesheet" type="text/css" />
+<meta name='viewport' content='width=950, user-scalable=no, maximum-scale=1.0' />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>termux#3</title>
+
+</head>
+<body> <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" >
+ $(document).ready(function(){ 
+  $.get("/site/bars.html", function(data) {
+    $("#bar").html(data);
+  });
+}); 
+</script>
+    <div id="bar">
+    </div>
+<br>
+<div id="main">
+<br>
+      <div id="result">
+<br><br><br>
+<p><h2>Тема: termux#3</h2><br>
+<h3>НАСТРОЙКА VHOSTS НА TERMUX</h3><br>
+<h1>ИСПРАВНАЯ СТАТЬЯ! ЕЁ ИСПОЛЬЗОВАТЬ МОЖНО!!!</h1><br>
+Всё просто!<br>
+Пишем:<br>
+<mark>apt install nano</mark><br>
+<mark>nano ../usr/etc/apache2/extra/httpd-vhosts.conf</mark><br>
+В файле который открылся стераем всё до чиста и пишем:<br></center>
+<mark>
+&#706VirtualHost ВАШ IP:8080&#707<br>
+    ServerAdmin webmaster@dummy-host.example.com<br>
+    DocumentRoot "ВАШ ПУТЬ!"<br>
+    ServerName название<br>
+    ServerAlias www.название<br>
+    ErrorLog "var/log/apache2/dummy-host.example.com-error_log"<br>
+    CustomLog "var/log/apache2/dummy-host.example.com-access_log" common<br>
+&#706/VirtualHost&#707<br>
+<br>
+&#706VirtualHost ВАШ IP:8080&#707<br>
+    ServerAdmin webmaster@dummy-host2.example.com<br>
+    DocumentRoot "ВАШ ПУТЬ!"<br>
+    ServerName localhost<br>
+    ErrorLog "var/log/apache2/dummy-host2.example.com-error_log"<br>
+    CustomLog "var/log/apache2/dummy-host2.example.com-access_log" common<br>
+&#706/VirtualHost&#707</mark><br><br><center>
+IP можно проверить командой <mark>ifconfig</mark><br><br>
+ВСЁ!
+У Вас нечего не будет работать! Так как копировать нельзя! Termux видет такие <mark><</mark> скобки! А не такие <mark> &#706 </mark>!<br>
+</body>
+<html>
